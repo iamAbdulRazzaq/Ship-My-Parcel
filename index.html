@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ship My Parcel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/ship-my-parcel-logo.png" alt="Ship My Parcel Logo" style="height:40px; width:auto;"/>
+            <span>SHIP <span class="nerd">MY PARCEL</span></span>
+        </div>
+        <nav>
+            <a href="#" class="ship">SHIP</a>
+            <a href="#">HOW IT WORKS</a>
+            <a href="#">INTEGRATIONS</a>
+            <a href="#">SHIPPING SERVICES</a>
+            <a href="#">SIGN IN</a>
+            <button class="btn-primary">Start Shipping</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>GET THE BEST SHIPPING RATES FROM TOP COURIERS</h1>
+            <p>No fees, no commitments, simply pay for what you ship.</p>
+            <button class="btn-primary">Start Shipping</button>
+        </section>
+
+        <section class="quote-form">
+            <h3>Get a Quick Quote <span class="tooltip" title="Get an instant shipping rate quote.">?</span></h3>
+            <div class="toggleButtons" role="tablist">
+                <button type="button" class="active" role="tab" aria-selected="true" aria-controls="packagePanel" id="packageTab">Package</button>
+                <button type="button" role="tab" aria-selected="false" aria-controls="palletPanel" id="palletTab">Pallet</button>
+            </div>
+
+            <form id="quoteForm" aria-labelledby="packageTab">
+                <div class="form-row">
+                    <label for="shipFrom" class="form-label">Ship From</label>
+                    <select id="shipFrom" name="shipFrom" required>
+                        <option value="" disabled selected>Select Origin Country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="mx">Mexico</option>
+                        <option value="gb">United Kingdom</option>
+                        <option value="de">Germany</option>
+                        <option value="au">Australia</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="shipTo" class="form-label">Ship To</label>
+                    <select id="shipTo" name="shipTo" required>
+                        <option value="" disabled selected>Select Destination Country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="gb">United Kingdom</option>
+                        <option value="fr">France</option>
+                        <option value="jp">Japan</option>
+                        <option value="br">Brazil</option>
+                        <option value="in">India</option>
+                    </select>
+                </div>
+
+                <div class="zip-code-row">
+                    <div class="form-row">
+                        <label for="zipFrom" class="form-label">Zip Code</label>
+                        <input type="text" id="zipFrom" name="zipFrom" placeholder="Zip Code" maxlength="10" />
+                    </div>
+                    <div class="form-row">
+                        <label for="zipTo" class="form-label">Zip Code</label>
+                        <input type="text" id="zipTo" name="zipTo" placeholder="Zip Code" maxlength="10" />
+                    </div>
+                </div>
+
+                <!-- FIXED Weight input -->
+                <div class="form-row">
+                    <label for="weight" class="form-label">Weight</label>
+                    <input type="number" id="weight" name="weight" placeholder="Enter weight" min="0" step="0.01" required />
+                </div>
+                <div class="form-row">
+                    <label for="weightUnit" class="form-label" style="visibility:hidden;">Unit</label>
+                    <select id="weightUnit" name="weightUnit" class="unit-select">
+                        <option value="lbs" selected>LBS</option>
+                        <option value="kg">KG</option>
+                    </select>
+                </div>
+
+                <div class="dimension-label">Dimensions (Optional)</div>
+                <div class="dimension-inputs" aria-label="Dimensions L W H in Centimeters">
+                    <label for="dimL">L</label>
+                    <input type="number" id="dimL" name="dimL" min="0" step="0.01" />
+                    <label for="dimW">W</label>
+                    <input type="number" id="dimW" name="dimW" min="0" step="0.01" />
+                    <label for="dimH">H</label>
+                    <input type="number" id="dimH" name="dimH" min="0" step="0.01" />
+                    <button type="button" disabled style="background:#ddd;color:#666;border:none;padding:6px 12px;border-radius:5px;cursor:default;">CM</button>
+                </div>
+
+                <button type="submit" class="quote-btn">Get Quote Now! <i class="arrow-right"></i></button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.dhl.com/" target="_blank"><img src="images/dhl.png" alt="DHL" /></a>
+        <a href="https://www.fedex.com/" target="_blank"><img src="images/Fedex.png" alt="FedEx" /></a>
+        <a href="https://www.amazon.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" /></a>
+        <a href="https://www.canadapost-postescanada.ca/" target="_blank"><img src="images/canada post.png" alt="Canada Post" /></a>
+        <a href="https://www.loomisexpress.com/" target="_blank"><img src="images/loomis express.png" alt="Loomis Express" /></a>
+        <a href="https://www.purolator.com/" target="_blank"><img src="images/purolator.png" alt="Purolator" /></a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
